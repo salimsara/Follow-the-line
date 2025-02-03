@@ -1,0 +1,50 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "../protos/TrackOne.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.402564531054046 -0.015996574254810995 -0.9152518276132238 3.2143039792589
+  position 0.9350049685859335 -0.058994702923504116 0.7737622541158659
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  luminosity 2
+}
+RectangleArena {
+  floorSize 1.2 1.2
+  floorAppearance NULL
+  wallHeight 0.05
+  wallAppearance BrushedAluminium {
+    colorOverride 0.861677 0.876524 0.876524
+  }
+}
+E-puck {
+  translation -0.231219 0.167293 -0.000818782
+  rotation 0.0006926273523451163 -0.018428718235984964 0.9998299368450265 0.07723619217939455
+  controller "my_controller_line_follow"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 0.005 0
+      rotation 0 1 0 1.57
+      name "ir1"
+    }
+    DistanceSensor {
+      translation 0 -0.005 0
+      rotation 0 1 0 1.57
+      name "ir0"
+      type "infra-red"
+    }
+  ]
+}
+TrackOne {
+  translation 0 -2.48967e-13 6.74634e-14
+  rotation 1 0 0 1.5708
+}
